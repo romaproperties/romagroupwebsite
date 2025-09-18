@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header Styling */
 header {
   text-align: center;
   padding: 2rem;
@@ -17,6 +19,7 @@ header h1 {
   margin: 0.2em 0;
 }
 
+/* Service Squares Grid */
 main.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -35,30 +38,4 @@ main.grid {
   font-size: 1.2rem;
   font-weight: bold;
   color: #003366;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-ul {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  line-height: 1.6;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #eee;
-}
-
-footer a {
-  color: #003366;
-  text-decoration: none;
-  font-weight: bold;
-}
+  box-shadow: 0 4px 8px rg
