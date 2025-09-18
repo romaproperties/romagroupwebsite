@@ -132,6 +132,26 @@ footer a:hover {
 }
 
 /* =========================
+   Centered Bullet Lists for Service Pages
+========================= */
+.fullscreen-centered-list {
+  display: flex;
+  flex-direction: column; /* stack bullets vertically */
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  height: 100vh;           /* full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+.fullscreen-centered-list li {
+  list-style-position: inside; /* bullets inside block */
+  text-align: left;            /* text left-aligned within bullet */
+  margin: 10px 0;              /* spacing between items */
+  width: 250px;                /* fixed width for even vertical alignment */
+}
+
+/* =========================
    Responsive Adjustments
 ========================= */
 @media (max-width: 768px) {
@@ -151,5 +171,9 @@ footer a:hover {
   .service-square {
     width: 180px;
     height: 180px;
+  }
+
+  .fullscreen-centered-list li {
+    width: 200px; /* smaller on mobile */
   }
 }
