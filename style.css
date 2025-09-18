@@ -29,6 +29,7 @@ main.grid {
 
 .card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #fff;
@@ -39,12 +40,21 @@ main.grid {
   font-weight: bold;
   color: #003366;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+  cursor: pointer; /* makes it obvious clickable */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-5px) scale(1.05); /* lift + slightly bigger */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2); /* stronger shadow */
+}
+
+.card .learn-more {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #555;
 }
 
 /* Lists on Service Pages */
