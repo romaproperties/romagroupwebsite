@@ -38,12 +38,83 @@ main.grid {
   font-size: 1.2rem;
   font-weight: bold;
   color: #003366;
-  box-shadow: 0 4px 8px rg
-
-
-footer a {
-  color: #003366;       /* Matches your brand color */
-  text-decoration: underline; /* Makes the email link stand out */
-  font-weight: bold;     /* Optional: makes it bolder */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Lists on Service Pages */
+ul {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;          /* Center footer text */
+  padding: 2rem 1rem;
+  background: #eee;
+}
+
+footer p {
+  margin: 0.5rem 0;           /* Space between lines */
+}
+
+footer a {
+  color: #003366;
+  text-decoration: underline;  /* Make email link visible */
+  font-weight: bold;
+}
+
+/* Contact Form Styling */
+.contact {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  color: #003366;
+}
+
+.contact label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact button:hover {
+  background: #0055aa;
+}
