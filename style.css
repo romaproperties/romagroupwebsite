@@ -39,3 +39,11 @@ main.grid {
   font-weight: bold;
   color: #003366;
   box-shadow: 0 4px 8px rg
+
+
+footer a {
+  color: #003366;       /* Matches your brand color */
+  text-decoration: underline; /* Makes the email link stand out */
+  font-weight: bold;     /* Optional: makes it bolder */
+}
+
