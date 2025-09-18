@@ -1,9 +1,8 @@
 /* =========================
-   Global Variables
+   Global Colors & Fonts
 ========================= */
 :root {
   --primary-color: #4a90e2;   /* Soft blue */
-  --secondary-color: #f4f6f8; /* Light gray background */
   --accent-color: #2ecc71;    /* Subtle green */
   --background-color: #ffffff;/* White background */
   --text-color: #333333;      /* Dark gray text */
@@ -28,119 +27,69 @@ body {
   background-color: var(--background-color);
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-color);
-}
-
 /* =========================
-   Header / Navigation
+   Header / Hero Section
 ========================= */
 header {
   background-color: var(--primary-color);
   color: var(--background-color);
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 40px 20px;
+  text-align: center; /* Center header text */
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-weight: bold;
-}
-
-nav a {
-  color: var(--background-color);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* =========================
-   Hero Section
-========================= */
-.hero {
-  background-color: var(--secondary-color);
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h1 {
+header h1 {
   font-family: var(--heading-font);
   font-size: 3rem;
-  color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.hero p {
+header p {
   font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 /* =========================
-   Sections
+   Service Squares
 ========================= */
-section {
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Keep squares centered */
+  gap: 20px;
   padding: 60px 20px;
 }
 
-.services, .team {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background-color: var(--background-color);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.card h3 {
-  font-family: var(--heading-font);
-  margin-bottom: 10px;
-  color: var(--primary-color);
-}
-
-.card p {
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-/* =========================
-   Footer
-========================= */
-footer {
+.service-square {
   background-color: var(--primary-color);
   color: var(--background-color);
-  padding: 30px 20px;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
   text-align: center;
-}
-
-footer a {
-  color: var(--background-color);
-  margin: 0 10px;
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative; /* Needed for caption */
 }
 
-footer a:hover {
-  color: var(--accent-color);
+.service-square:hover {
+  transform: translateY(-5px);
+  background-color: var(--accent-color);
+}
+
+/* Caption at the bottom of each square */
+.service-square::after {
+  content: "Click to Learn More";
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--background-color);
 }
 
 /* =========================
@@ -163,15 +112,44 @@ button:hover, .btn:hover {
 }
 
 /* =========================
-   Responsive Typography
+   Footer
 ========================= */
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 30px 20px;
+}
 
+footer a {
+  color: var(--background-color);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* =========================
+   Responsive Adjustments
+========================= */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
-  nav { flex-direction: column; gap: 15px; }
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-square {
+    width: 180px;
+    height: 180px;
+  }
 }
